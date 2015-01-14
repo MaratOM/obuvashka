@@ -1,0 +1,1628 @@
+# Russian translation of date (6.x-2.4)
+# Copyright (c) 2010 by the Russian translation team
+# Generated from files:
+#  date_timezone.module,v 1.18.2.3.2.12 2009/03/26 10:25:50 karens
+#  date_timezone.install,v 1.7.2.2.2.6 2008/09/06 14:20:10 karens
+#  date_timezone.info,v 1.3.4.1 2008/06/27 14:14:01 karens
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: date (6.x-2.4)\n"
+"POT-Creation-Date: 2010-02-15 00:35+0300\n"
+"PO-Revision-Date: 2009-11-26 23:32+0300\n"
+"Language-Team: Russian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=((((n%10)==1)&&((n%100)!=11))?(0):(((((n%10)>=2)&&((n%10)<=4))&&(((n%100)<10)||((n%100)>=20)))?(1):2));\n"
+
+#: date_timezone/date_timezone.module:118,63
+msgid "Default time zone"
+msgstr "Часовой пояс по умолчанию"
+
+#: date_timezone/date_timezone.module:267
+msgid "timezone"
+msgstr "часовой пояс"
+
+#: date_timezone/date_timezone.install:220
+msgid "Africa/Algiers"
+msgstr "Африка/Алжир"
+
+#: date_timezone/date_timezone.install:221
+msgid "Africa/Asmera"
+msgstr "Африка/Асмера"
+
+#: date_timezone/date_timezone.install:222
+msgid "Africa/Bangui"
+msgstr "Африка/Банги"
+
+#: date_timezone/date_timezone.install:223
+msgid "Africa/Blantyre"
+msgstr "Africa/Blantyre"
+
+#: date_timezone/date_timezone.install:224
+msgid "Africa/Brazzaville"
+msgstr "Африка/Браззавиль"
+
+#: date_timezone/date_timezone.install:225
+msgid "Africa/Bujumbura"
+msgstr "Африка/Бужумбура"
+
+#: date_timezone/date_timezone.install:226
+msgid "Africa/Cairo"
+msgstr "Африка/Каир"
+
+#: date_timezone/date_timezone.install:227
+msgid "Africa/Ceuta"
+msgstr "Африка/Сеута"
+
+#: date_timezone/date_timezone.install:228
+msgid "Africa/Dar_es_Salaam"
+msgstr "Африка/Дар-эс-Салам"
+
+#: date_timezone/date_timezone.install:229
+msgid "Africa/Djibouti"
+msgstr "Африка/Джибути"
+
+#: date_timezone/date_timezone.install:230
+msgid "Africa/Douala"
+msgstr "Африка/Дуала"
+
+#: date_timezone/date_timezone.install:231
+msgid "Africa/Gaborone"
+msgstr "Африка/Габороне"
+
+#: date_timezone/date_timezone.install:232
+msgid "Africa/Harare"
+msgstr "Африка/Хараре"
+
+#: date_timezone/date_timezone.install:233
+msgid "Africa/Johannesburg"
+msgstr "Африка/Иоганнесбург"
+
+#: date_timezone/date_timezone.install:234
+msgid "Africa/Kampala"
+msgstr "Африка/Кампала"
+
+#: date_timezone/date_timezone.install:235
+msgid "Africa/Khartoum"
+msgstr "Африка/Хартум"
+
+#: date_timezone/date_timezone.install:236
+msgid "Africa/Kigali"
+msgstr "Африка/Кигали"
+
+#: date_timezone/date_timezone.install:237
+msgid "Africa/Kinshasa"
+msgstr "Африка/Киншаса"
+
+#: date_timezone/date_timezone.install:238
+msgid "Africa/Lagos"
+msgstr "Africa/Lagos"
+
+#: date_timezone/date_timezone.install:239
+msgid "Africa/Libreville"
+msgstr "Африка/Либревиль"
+
+#: date_timezone/date_timezone.install:240
+msgid "Africa/Luanda"
+msgstr "Африка/Луанда"
+
+#: date_timezone/date_timezone.install:241
+msgid "Africa/Lubumbashi"
+msgstr "Африка/Лубумбаши"
+
+#: date_timezone/date_timezone.install:242
+msgid "Africa/Lusaka"
+msgstr "Африка/Лусака"
+
+#: date_timezone/date_timezone.install:243
+msgid "Africa/Malabo"
+msgstr "Африка/Малабо"
+
+#: date_timezone/date_timezone.install:244
+msgid "Africa/Maputo"
+msgstr "Африка/Мапуту"
+
+#: date_timezone/date_timezone.install:245
+msgid "Africa/Maseru"
+msgstr "Африка/Масеру"
+
+#: date_timezone/date_timezone.install:246
+msgid "Africa/Mbabane"
+msgstr "Африка/Мбабане"
+
+#: date_timezone/date_timezone.install:247
+msgid "Africa/Mogadishu"
+msgstr "Африка/Могадишо"
+
+#: date_timezone/date_timezone.install:248
+msgid "Africa/Nairobi"
+msgstr "Африка/Найроби"
+
+#: date_timezone/date_timezone.install:249
+msgid "Africa/Ndjamena"
+msgstr "Африка/Нджамена"
+
+#: date_timezone/date_timezone.install:250
+msgid "Africa/Niamey"
+msgstr "Африка/Ниамей"
+
+#: date_timezone/date_timezone.install:251
+msgid "Africa/Porto-Novo"
+msgstr "Африка/Порто-Ново"
+
+#: date_timezone/date_timezone.install:252
+msgid "Africa/Tripoli"
+msgstr "Африка/Триполи"
+
+#: date_timezone/date_timezone.install:253
+msgid "Africa/Tunis"
+msgstr "Африка/Тунис"
+
+#: date_timezone/date_timezone.install:254
+msgid "Africa/Windhoek"
+msgstr "Африка/Виндхук"
+
+#: date_timezone/date_timezone.install:255
+msgid "America/Adak"
+msgstr "Америка/Адак"
+
+#: date_timezone/date_timezone.install:256
+msgid "America/Anchorage"
+msgstr "Америка/Анкоридж"
+
+#: date_timezone/date_timezone.install:257
+msgid "America/Anguilla"
+msgstr "Америка/Ангилья"
+
+#: date_timezone/date_timezone.install:258
+msgid "America/Antigua"
+msgstr "Америка/Антигуа"
+
+#: date_timezone/date_timezone.install:259
+msgid "America/Araguaina"
+msgstr "Америка/Арагуайна(Бразилия)"
+
+#: date_timezone/date_timezone.install:260
+msgid "America/Aruba"
+msgstr "Америка/Аруба"
+
+#: date_timezone/date_timezone.install:261
+msgid "America/Asuncion"
+msgstr "Америка/Асунсьон"
+
+#: date_timezone/date_timezone.install:262
+msgid "America/Atka"
+msgstr "Америка/Арка"
+
+#: date_timezone/date_timezone.install:263
+msgid "America/Barbados"
+msgstr "Америка/Барбадос"
+
+#: date_timezone/date_timezone.install:264
+msgid "America/Belem"
+msgstr "Америка/Белен"
+
+#: date_timezone/date_timezone.install:265
+msgid "America/Belize"
+msgstr "Америка/Белиз"
+
+#: date_timezone/date_timezone.install:266
+msgid "America/Boa_Vista"
+msgstr "Америка/Боа_Виста(Бразилия)"
+
+#: date_timezone/date_timezone.install:267
+msgid "America/Bogota"
+msgstr "Америка/Белен"
+
+#: date_timezone/date_timezone.install:268
+msgid "America/Boise"
+msgstr "Америка/Белен"
+
+#: date_timezone/date_timezone.install:269
+msgid "America/Buenos_Aires"
+msgstr "Америка/Буэнос-Айрес"
+
+#: date_timezone/date_timezone.install:270
+msgid "America/Cambridge_Bay"
+msgstr "Америка/Кембриджский_Залив"
+
+#: date_timezone/date_timezone.install:271
+msgid "America/Cancun"
+msgstr "Америка/Канкун(Мексика)"
+
+#: date_timezone/date_timezone.install:272
+msgid "America/Caracas"
+msgstr "Амерка/Каракас"
+
+#: date_timezone/date_timezone.install:273
+msgid "America/Catamarca"
+msgstr "Америка/Катамарка(Аргентина)"
+
+#: date_timezone/date_timezone.install:274
+msgid "America/Cayenne"
+msgstr "Америка/Кайенна"
+
+#: date_timezone/date_timezone.install:275
+msgid "America/Cayman"
+msgstr "Америка/Кайман"
+
+#: date_timezone/date_timezone.install:276
+msgid "America/Chicago"
+msgstr "Америка/Чикаго"
+
+#: date_timezone/date_timezone.install:277
+msgid "America/Chihuahua"
+msgstr "Америка/Чиуауа"
+
+#: date_timezone/date_timezone.install:278
+msgid "America/Cordoba"
+msgstr "Америка/Кордова"
+
+#: date_timezone/date_timezone.install:279
+msgid "America/Costa_Rica"
+msgstr "Америка/Коста-Рика"
+
+#: date_timezone/date_timezone.install:280
+msgid "America/Cuiaba"
+msgstr "Америка/Куяба"
+
+#: date_timezone/date_timezone.install:281
+msgid "America/Curacao"
+msgstr "Америка/Кюрасао"
+
+#: date_timezone/date_timezone.install:282
+msgid "America/Dawson"
+msgstr "Америка/Доусон"
+
+#: date_timezone/date_timezone.install:283
+msgid "America/Dawson_Creek"
+msgstr "Америка/Доусонский_Ручей"
+
+#: date_timezone/date_timezone.install:284
+msgid "America/Denver"
+msgstr "Америка/Денвер"
+
+#: date_timezone/date_timezone.install:285
+msgid "America/Detroit"
+msgstr "Америка/Детройт"
+
+#: date_timezone/date_timezone.install:286
+msgid "America/Dominica"
+msgstr "Америка/Доминиканская_республика"
+
+#: date_timezone/date_timezone.install:287
+msgid "America/Edmonton"
+msgstr "Америка/Эдмонтон"
+
+#: date_timezone/date_timezone.install:288
+msgid "America/Eirunepe"
+msgstr "Америка/Эйрунепе(Бразилия)"
+
+#: date_timezone/date_timezone.install:289
+msgid "America/El_Salvador"
+msgstr "Америка/Сальвадор"
+
+#: date_timezone/date_timezone.install:290
+msgid "America/Ensenada"
+msgstr "Америка/Энсенада(Мексика)"
+
+#: date_timezone/date_timezone.install:291
+msgid "America/Fort_Wayne"
+msgstr "Америка/Форт-Уэйн"
+
+#: date_timezone/date_timezone.install:292
+msgid "America/Fortaleza"
+msgstr "Америка/Фортализа"
+
+#: date_timezone/date_timezone.install:293
+msgid "America/Glace_Bay"
+msgstr "Америка/Глейс-Бей"
+
+#: date_timezone/date_timezone.install:294
+msgid "America/Godthab"
+msgstr "Америка/Готхоб"
+
+#: date_timezone/date_timezone.install:295
+msgid "America/Goose_Bay"
+msgstr "Америка/Гуз_Бэй"
+
+#: date_timezone/date_timezone.install:296
+msgid "America/Grand_Turk"
+msgstr "Америка/Гранд-Терк"
+
+#: date_timezone/date_timezone.install:297
+msgid "America/Grenada"
+msgstr "Америка/Гренада"
+
+#: date_timezone/date_timezone.install:298
+msgid "America/Guadeloupe"
+msgstr "Америка/Гваделупа"
+
+#: date_timezone/date_timezone.install:299
+msgid "America/Guatemala"
+msgstr "Америка/Гватемала"
+
+#: date_timezone/date_timezone.install:300
+msgid "America/Guayaquil"
+msgstr "Америка/Гуаякиль"
+
+#: date_timezone/date_timezone.install:301
+msgid "America/Guyana"
+msgstr "Америка/Гайана"
+
+#: date_timezone/date_timezone.install:302
+msgid "America/Halifax"
+msgstr "Америка/Галифакс"
+
+#: date_timezone/date_timezone.install:303
+msgid "America/Havana"
+msgstr "Америка/Гавана"
+
+#: date_timezone/date_timezone.install:304
+msgid "America/Hermosillo"
+msgstr "Америка/Эрмосильо"
+
+#: date_timezone/date_timezone.install:305
+msgid "America/Indiana/Indianapolis"
+msgstr "Америка/Индиана/Индианаполис"
+
+#: date_timezone/date_timezone.install:306
+msgid "America/Indiana/Knox"
+msgstr "Америка/Индиана/Нокс"
+
+#: date_timezone/date_timezone.install:307
+msgid "America/Indiana/Marengo"
+msgstr "Америка/Индиана/Маренго"
+
+#: date_timezone/date_timezone.install:308
+msgid "America/Indiana/Vevay"
+msgstr ""
+
+#: date_timezone/date_timezone.install:309
+msgid "America/Indianapolis"
+msgstr "Америка/Индианаполис"
+
+#: date_timezone/date_timezone.install:310
+msgid "America/Inuvik"
+msgstr ""
+
+#: date_timezone/date_timezone.install:311
+msgid "America/Iqaluit"
+msgstr ""
+
+#: date_timezone/date_timezone.install:312
+msgid "America/Jamaica"
+msgstr "Америка/Ямайка"
+
+#: date_timezone/date_timezone.install:313
+msgid "America/Jujuy"
+msgstr "Америка/Жужуй"
+
+#: date_timezone/date_timezone.install:314
+msgid "America/Juneau"
+msgstr "Америка/Джуно"
+
+#: date_timezone/date_timezone.install:315
+msgid "America/Kentucky/Louisville"
+msgstr "Америка/Кентукки/Луисвилл"
+
+#: date_timezone/date_timezone.install:316
+msgid "America/Kentucky/Monticello"
+msgstr ""
+
+#: date_timezone/date_timezone.install:317
+msgid "America/Knox_IN"
+msgstr ""
+
+#: date_timezone/date_timezone.install:318
+msgid "America/La_Paz"
+msgstr "Америка/Ла-Пас"
+
+#: date_timezone/date_timezone.install:319
+msgid "America/Lima"
+msgstr "Америка/Лима"
+
+#: date_timezone/date_timezone.install:320
+msgid "America/Los_Angeles"
+msgstr "Америка/Лос-Анджелес"
+
+#: date_timezone/date_timezone.install:321
+msgid "America/Louisville"
+msgstr "Америка/Луисвилл"
+
+#: date_timezone/date_timezone.install:322
+msgid "America/Maceio"
+msgstr "Америка/Масейо"
+
+#: date_timezone/date_timezone.install:323
+msgid "America/Managua"
+msgstr "Америка/Манагуа"
+
+#: date_timezone/date_timezone.install:324
+msgid "America/Manaus"
+msgstr "Америка/Манаус"
+
+#: date_timezone/date_timezone.install:325
+msgid "America/Martinique"
+msgstr "Америка/Мартиника"
+
+#: date_timezone/date_timezone.install:326
+msgid "America/Mazatlan"
+msgstr "Америка/Масатлан"
+
+#: date_timezone/date_timezone.install:327
+msgid "America/Mendoza"
+msgstr "Америка/Мендоса"
+
+#: date_timezone/date_timezone.install:328
+msgid "America/Menominee"
+msgstr "Америка/Меномини"
+
+#: date_timezone/date_timezone.install:329
+msgid "America/Merida"
+msgstr "Америка/Мерида"
+
+#: date_timezone/date_timezone.install:330
+msgid "America/Mexico_City"
+msgstr "Америка/Мехико"
+
+#: date_timezone/date_timezone.install:331
+msgid "America/Miquelon"
+msgstr "Америка/Микелон"
+
+#: date_timezone/date_timezone.install:332
+msgid "America/Monterrey"
+msgstr "Америка/Монтеррей"
+
+#: date_timezone/date_timezone.install:333
+msgid "America/Montevideo"
+msgstr "America/Montevideo"
+
+#: date_timezone/date_timezone.install:334
+msgid "America/Montreal"
+msgstr "America/Монреаль"
+
+#: date_timezone/date_timezone.install:335
+msgid "America/Montserrat"
+msgstr "Америка/Монтсеррат"
+
+#: date_timezone/date_timezone.install:336
+msgid "America/Nassau"
+msgstr "Америка/Нассау"
+
+#: date_timezone/date_timezone.install:337
+msgid "America/New_York"
+msgstr "Америка/Нью_Йорк"
+
+#: date_timezone/date_timezone.install:338
+msgid "America/Nipigon"
+msgstr "Америка/Нипигон"
+
+#: date_timezone/date_timezone.install:339
+msgid "America/Nome"
+msgstr "Америка/Ном"
+
+#: date_timezone/date_timezone.install:340
+msgid "America/Noronha"
+msgstr "Америка/Норонха"
+
+#: date_timezone/date_timezone.install:341
+msgid "America/Panama"
+msgstr "Америка/Панама"
+
+#: date_timezone/date_timezone.install:342
+msgid "America/Pangnirtung"
+msgstr "Америка/Пангниртанг"
+
+#: date_timezone/date_timezone.install:343
+msgid "America/Paramaribo"
+msgstr "Америка/Парамарибо"
+
+#: date_timezone/date_timezone.install:344
+msgid "America/Phoenix"
+msgstr "Америка/Финикс"
+
+#: date_timezone/date_timezone.install:345
+msgid "America/Port-au-Prince"
+msgstr "Америка/Порт-о-Пренс"
+
+#: date_timezone/date_timezone.install:346
+msgid "America/Port_of_Spain"
+msgstr "Америка/Порт-оф-Спейн"
+
+#: date_timezone/date_timezone.install:347
+msgid "America/Porto_Acre"
+msgstr "Америка/Порто_Акр"
+
+#: date_timezone/date_timezone.install:348
+msgid "America/Porto_Velho"
+msgstr "Америка/Порту-Велью"
+
+#: date_timezone/date_timezone.install:349
+msgid "America/Puerto_Rico"
+msgstr "Америка/Пуэрто_Рико"
+
+#: date_timezone/date_timezone.install:350
+msgid "America/Rainy_River"
+msgstr ""
+
+#: date_timezone/date_timezone.install:351
+msgid "America/Rankin_Inlet"
+msgstr ""
+
+#: date_timezone/date_timezone.install:352
+msgid "America/Recife"
+msgstr "America/Recife"
+
+#: date_timezone/date_timezone.install:353
+msgid "America/Regina"
+msgstr "Америка/Реджина"
+
+#: date_timezone/date_timezone.install:354
+msgid "America/Rio_Branco"
+msgstr "Америка/Риу-Бранку"
+
+#: date_timezone/date_timezone.install:355
+msgid "America/Rosario"
+msgstr "Америка/Росарио"
+
+#: date_timezone/date_timezone.install:356
+msgid "America/Santiago"
+msgstr "Америка/Сантьяго"
+
+#: date_timezone/date_timezone.install:357
+msgid "America/Santo_Domingo"
+msgstr "Америка/Санто-Доминго"
+
+#: date_timezone/date_timezone.install:358
+msgid "America/Sao_Paulo"
+msgstr "Америка/Сан_Пауло"
+
+#: date_timezone/date_timezone.install:359
+msgid "America/Scoresbysund"
+msgstr "Америка/Скорсбайсанд(Гренландия)"
+
+#: date_timezone/date_timezone.install:360
+msgid "America/Shiprock"
+msgstr "Америка/Шипрок"
+
+#: date_timezone/date_timezone.install:361
+msgid "America/St_Johns"
+msgstr "Америка/С-Джонс"
+
+#: date_timezone/date_timezone.install:362
+msgid "America/St_Kitts"
+msgstr "Америка/С-Киттс"
+
+#: date_timezone/date_timezone.install:363
+msgid "America/St_Lucia"
+msgstr "Америка/С-Лючия"
+
+#: date_timezone/date_timezone.install:364
+msgid "America/St_Thomas"
+msgstr "Америка/С-Томас"
+
+#: date_timezone/date_timezone.install:365
+msgid "America/St_Vincent"
+msgstr "Америка/С-Винсент"
+
+#: date_timezone/date_timezone.install:366
+msgid "America/Swift_Current"
+msgstr "Америка/Свифт_Каррент"
+
+#: date_timezone/date_timezone.install:367
+msgid "America/Tegucigalpa"
+msgstr "Америка/Тегусигальпа"
+
+#: date_timezone/date_timezone.install:368
+msgid "America/Thule"
+msgstr "America/Thule"
+
+#: date_timezone/date_timezone.install:369
+msgid "America/Thunder_Bay"
+msgstr "Америка/Тандер-Бей"
+
+#: date_timezone/date_timezone.install:370
+msgid "America/Tijuana"
+msgstr "Америка/Тихуана"
+
+#: date_timezone/date_timezone.install:371
+msgid "America/Tortola"
+msgstr "Америка/Тортола"
+
+#: date_timezone/date_timezone.install:372
+msgid "America/Vancouver"
+msgstr "Америка/Ванкувер"
+
+#: date_timezone/date_timezone.install:373
+msgid "America/Virgin"
+msgstr "Америка/Вирджин"
+
+#: date_timezone/date_timezone.install:374
+msgid "America/Whitehorse"
+msgstr "Америка/Уайтхорс"
+
+#: date_timezone/date_timezone.install:375
+msgid "America/Winnipeg"
+msgstr "Америка/Виннипег"
+
+#: date_timezone/date_timezone.install:376
+msgid "America/Yakutat"
+msgstr "Америка/Якутат"
+
+#: date_timezone/date_timezone.install:377
+msgid "America/Yellowknife"
+msgstr "Америка/Йеллоунайф"
+
+#: date_timezone/date_timezone.install:378
+msgid "Antarctica/Casey"
+msgstr "Антарктида/Кейси"
+
+#: date_timezone/date_timezone.install:379
+msgid "Antarctica/Davis"
+msgstr "Антарктида/Дэвис"
+
+#: date_timezone/date_timezone.install:380
+msgid "Antarctica/DumontDUrville"
+msgstr "Антарктика/Дюмон Д'Урвиль"
+
+#: date_timezone/date_timezone.install:381
+msgid "Antarctica/Mawson"
+msgstr "Антарктида/Моусон"
+
+#: date_timezone/date_timezone.install:382
+msgid "Antarctica/McMurdo"
+msgstr "Антарктика/МакМердо"
+
+#: date_timezone/date_timezone.install:383
+msgid "Antarctica/Palmer"
+msgstr "Антарктида/Паломник"
+
+#: date_timezone/date_timezone.install:384
+msgid "Antarctica/South_Pole"
+msgstr "Антарктида/Южный_полюс"
+
+#: date_timezone/date_timezone.install:385
+msgid "Antarctica/Syowa"
+msgstr "Антарктика/Syowa"
+
+#: date_timezone/date_timezone.install:386
+msgid "Antarctica/Vostok"
+msgstr "Антарктика/Восток"
+
+#: date_timezone/date_timezone.install:387
+msgid "Arctic/Longyearbyen"
+msgstr ""
+
+#: date_timezone/date_timezone.install:388
+msgid "Asia/Aden"
+msgstr "Азия/Аден"
+
+#: date_timezone/date_timezone.install:389
+msgid "Asia/Almaty"
+msgstr "Азия/Алма-Ата"
+
+#: date_timezone/date_timezone.install:390
+msgid "Asia/Amman"
+msgstr "Азия/Омман"
+
+#: date_timezone/date_timezone.install:391
+msgid "Asia/Anadyr"
+msgstr "Азия/Анадырь"
+
+#: date_timezone/date_timezone.install:392
+msgid "Asia/Aqtau"
+msgstr "Азия/Актау"
+
+#: date_timezone/date_timezone.install:393
+msgid "Asia/Aqtobe"
+msgstr "Азия/Актюбинск"
+
+#: date_timezone/date_timezone.install:394
+msgid "Asia/Ashgabat"
+msgstr "Азия/Ашгабат"
+
+#: date_timezone/date_timezone.install:395
+msgid "Asia/Ashkhabad"
+msgstr "Азия/Ашхабад"
+
+#: date_timezone/date_timezone.install:396
+msgid "Asia/Baghdad"
+msgstr "Азия/Багдад"
+
+#: date_timezone/date_timezone.install:397
+msgid "Asia/Bahrain"
+msgstr "Азия/Бахрейн"
+
+#: date_timezone/date_timezone.install:398
+msgid "Asia/Baku"
+msgstr "Азия/Баку"
+
+#: date_timezone/date_timezone.install:399
+msgid "Asia/Bangkok"
+msgstr "Азия/Бангкок"
+
+#: date_timezone/date_timezone.install:400
+msgid "Asia/Beirut"
+msgstr "Азия/Бейрут"
+
+#: date_timezone/date_timezone.install:401
+msgid "Asia/Bishkek"
+msgstr "Азия/Бишкек"
+
+#: date_timezone/date_timezone.install:402
+msgid "Asia/Brunei"
+msgstr "Азия/Бруней"
+
+#: date_timezone/date_timezone.install:403
+msgid "Asia/Calcutta"
+msgstr "Азия/Калькутта"
+
+#: date_timezone/date_timezone.install:404
+msgid "Asia/Chungking"
+msgstr "Азия/Чунцин"
+
+#: date_timezone/date_timezone.install:405
+msgid "Asia/Colombo"
+msgstr "Азия/Коломбо"
+
+#: date_timezone/date_timezone.install:406
+msgid "Asia/Dacca"
+msgstr "Азия/Дакка"
+
+#: date_timezone/date_timezone.install:407
+msgid "Asia/Damascus"
+msgstr "Азия/Дамаск"
+
+#: date_timezone/date_timezone.install:408
+msgid "Asia/Dhaka"
+msgstr ""
+
+#: date_timezone/date_timezone.install:409
+msgid "Asia/Dili"
+msgstr "Азия/Дили"
+
+#: date_timezone/date_timezone.install:410
+msgid "Asia/Dubai"
+msgstr "Азия/Дубаи"
+
+#: date_timezone/date_timezone.install:411
+msgid "Asia/Dushanbe"
+msgstr "Азия/Душанбе"
+
+#: date_timezone/date_timezone.install:412
+msgid "Asia/Gaza"
+msgstr "Азия/Газа"
+
+#: date_timezone/date_timezone.install:413
+msgid "Asia/Harbin"
+msgstr "Азия/Харбин"
+
+#: date_timezone/date_timezone.install:414
+msgid "Asia/Hong_Kong"
+msgstr "Азия/Гонконг"
+
+#: date_timezone/date_timezone.install:415
+msgid "Asia/Hovd"
+msgstr ""
+
+#: date_timezone/date_timezone.install:416
+msgid "Asia/Irkutsk"
+msgstr "Азия/Иркутск"
+
+#: date_timezone/date_timezone.install:417
+msgid "Asia/Istanbul"
+msgstr "Азия/Стамбул"
+
+#: date_timezone/date_timezone.install:418
+msgid "Asia/Jakarta"
+msgstr "Азия/Джакарта"
+
+#: date_timezone/date_timezone.install:419
+msgid "Asia/Jayapura"
+msgstr ""
+
+#: date_timezone/date_timezone.install:420
+msgid "Asia/Jerusalem"
+msgstr "Азия/Иерусалим"
+
+#: date_timezone/date_timezone.install:421
+msgid "Asia/Kabul"
+msgstr "Азия/Кабул"
+
+#: date_timezone/date_timezone.install:422
+msgid "Asia/Kamchatka"
+msgstr "Азия/Камчатка"
+
+#: date_timezone/date_timezone.install:423
+msgid "Asia/Karachi"
+msgstr "Азия/Карачи"
+
+#: date_timezone/date_timezone.install:424
+msgid "Asia/Kashgar"
+msgstr "Азия/Кашгар"
+
+#: date_timezone/date_timezone.install:425
+msgid "Asia/Katmandu"
+msgstr "Азия/Катманду"
+
+#: date_timezone/date_timezone.install:426
+msgid "Asia/Krasnoyarsk"
+msgstr "Азия/Красноярск"
+
+#: date_timezone/date_timezone.install:427
+msgid "Asia/Kuala_Lumpur"
+msgstr "Азия/Куала-Лумпур"
+
+#: date_timezone/date_timezone.install:428
+msgid "Asia/Kuching"
+msgstr "Азия/Кучинг"
+
+#: date_timezone/date_timezone.install:429
+msgid "Asia/Kuwait"
+msgstr "Азия/Кувейт"
+
+#: date_timezone/date_timezone.install:430
+msgid "Asia/Macao"
+msgstr "Азия/Макао"
+
+#: date_timezone/date_timezone.install:431
+msgid "Asia/Magadan"
+msgstr "Азия/Магадан"
+
+#: date_timezone/date_timezone.install:432
+msgid "Asia/Manila"
+msgstr "Азия/Манила"
+
+#: date_timezone/date_timezone.install:433
+msgid "Asia/Muscat"
+msgstr "Азия/Мускат"
+
+#: date_timezone/date_timezone.install:434
+msgid "Asia/Nicosia"
+msgstr "Азия/Никосия"
+
+#: date_timezone/date_timezone.install:435
+msgid "Asia/Novosibirsk"
+msgstr "Азия/Новосибирск"
+
+#: date_timezone/date_timezone.install:436
+msgid "Asia/Omsk"
+msgstr "Азия/Омск"
+
+#: date_timezone/date_timezone.install:437
+msgid "Asia/Phnom_Penh"
+msgstr "Азия/Пномпень"
+
+#: date_timezone/date_timezone.install:438
+msgid "Asia/Pyongyang"
+msgstr "Азия/Пхеньян"
+
+#: date_timezone/date_timezone.install:439
+msgid "Asia/Qatar"
+msgstr "Азия/Катар"
+
+#: date_timezone/date_timezone.install:440
+msgid "Asia/Rangoon"
+msgstr "Азия/Рангун"
+
+#: date_timezone/date_timezone.install:441
+msgid "Asia/Riyadh"
+msgstr "Азия/Эр-Рияд"
+
+#: date_timezone/date_timezone.install:442
+msgid "Asia/Riyadh87"
+msgstr "Азия/Эр-Рияд87"
+
+#: date_timezone/date_timezone.install:443
+msgid "Asia/Riyadh88"
+msgstr "Азия/Эр-Рияд88"
+
+#: date_timezone/date_timezone.install:444
+msgid "Asia/Riyadh89"
+msgstr "Азия/Эр-Рияд89"
+
+#: date_timezone/date_timezone.install:445
+msgid "Asia/Saigon"
+msgstr "Азия/Сайгон"
+
+#: date_timezone/date_timezone.install:446
+msgid "Asia/Samarkand"
+msgstr "Азия/Самарканд"
+
+#: date_timezone/date_timezone.install:447
+msgid "Asia/Seoul"
+msgstr "Азия/Сеул"
+
+#: date_timezone/date_timezone.install:448
+msgid "Asia/Shanghai"
+msgstr "Азия/Шанхай"
+
+#: date_timezone/date_timezone.install:449
+msgid "Asia/Singapore"
+msgstr "Азия/Сингапур"
+
+#: date_timezone/date_timezone.install:450
+msgid "Asia/Taipei"
+msgstr "Азия/Тайбэй"
+
+#: date_timezone/date_timezone.install:451
+msgid "Asia/Tashkent"
+msgstr "Азия/Ташкент"
+
+#: date_timezone/date_timezone.install:452
+msgid "Asia/Tbilisi"
+msgstr "Азия/Тбилиси"
+
+#: date_timezone/date_timezone.install:453
+msgid "Asia/Tehran"
+msgstr "Азия/Тегеран"
+
+#: date_timezone/date_timezone.install:454
+msgid "Asia/Tel_Aviv"
+msgstr "Азия/Тель-Авив"
+
+#: date_timezone/date_timezone.install:455
+msgid "Asia/Thimbu"
+msgstr "Азия/Тхимпху"
+
+#: date_timezone/date_timezone.install:456
+msgid "Asia/Thimphu"
+msgstr "Азия/Тхимпху"
+
+#: date_timezone/date_timezone.install:457
+msgid "Asia/Tokyo"
+msgstr "Азия/Токио"
+
+#: date_timezone/date_timezone.install:458
+msgid "Asia/Ujung_Pandang"
+msgstr "Азия/Уджунгпанданг"
+
+#: date_timezone/date_timezone.install:459
+msgid "Asia/Ulaanbaatar"
+msgstr "Азияч/Улан-Батор"
+
+#: date_timezone/date_timezone.install:460
+msgid "Asia/Ulan_Bator"
+msgstr "Азия/Улан-Батор"
+
+#: date_timezone/date_timezone.install:461
+msgid "Asia/Urumqi"
+msgstr "Asia/Urumqi"
+
+#: date_timezone/date_timezone.install:462
+msgid "Asia/Vientiane"
+msgstr "Азия/Вьентьян"
+
+#: date_timezone/date_timezone.install:463
+msgid "Asia/Vladivostok"
+msgstr "Азия/Владивосток"
+
+#: date_timezone/date_timezone.install:464
+msgid "Asia/Yakutsk"
+msgstr "Азия/Якутск"
+
+#: date_timezone/date_timezone.install:465
+msgid "Asia/Yekaterinburg"
+msgstr "Азия/Екатеринбург"
+
+#: date_timezone/date_timezone.install:466
+msgid "Asia/Yerevan"
+msgstr "Азия/Ереван"
+
+#: date_timezone/date_timezone.install:467
+msgid "Atlantic/Azores"
+msgstr "Атлантика/Азорские_острова"
+
+#: date_timezone/date_timezone.install:468
+msgid "Atlantic/Bermuda"
+msgstr "Атантика/Бермуды"
+
+#: date_timezone/date_timezone.install:469
+msgid "Atlantic/Canary"
+msgstr "Атлантика/Канары"
+
+#: date_timezone/date_timezone.install:470
+msgid "Atlantic/Cape_Verde"
+msgstr "Атлантика/Зеленый_Мыс"
+
+#: date_timezone/date_timezone.install:471
+msgid "Atlantic/Faeroe"
+msgstr ""
+
+#: date_timezone/date_timezone.install:472
+msgid "Atlantic/Jan_Mayen"
+msgstr ""
+
+#: date_timezone/date_timezone.install:473
+msgid "Atlantic/Madeira"
+msgstr "Атлантика/Мадейра"
+
+#: date_timezone/date_timezone.install:474
+msgid "Atlantic/South_Georgia"
+msgstr "Атлантика/Южная_Георгия"
+
+#: date_timezone/date_timezone.install:475
+msgid "Atlantic/Stanley"
+msgstr "Атлантика/Стэнли"
+
+#: date_timezone/date_timezone.install:476
+msgid "Australia/ACT"
+msgstr "Австралия/ACT"
+
+#: date_timezone/date_timezone.install:477
+msgid "Australia/Adelaide"
+msgstr "Австралия/Аделаида"
+
+#: date_timezone/date_timezone.install:478
+msgid "Australia/Brisbane"
+msgstr "Австралия/Брисбен"
+
+#: date_timezone/date_timezone.install:479
+msgid "Australia/Broken_Hill"
+msgstr "Австралия/Брокен-Хилл"
+
+#: date_timezone/date_timezone.install:480
+msgid "Australia/Canberra"
+msgstr "Австралия/Канберра"
+
+#: date_timezone/date_timezone.install:481
+msgid "Australia/Darwin"
+msgstr "Австралия/Дарвин"
+
+#: date_timezone/date_timezone.install:482
+msgid "Australia/Hobart"
+msgstr "Австралия/Хобарт"
+
+#: date_timezone/date_timezone.install:483
+msgid "Australia/LHI"
+msgstr "Австралия/LHI"
+
+#: date_timezone/date_timezone.install:484
+msgid "Australia/Lindeman"
+msgstr "Австралия/Линдеман"
+
+#: date_timezone/date_timezone.install:485
+msgid "Australia/Lord_Howe"
+msgstr ""
+
+#: date_timezone/date_timezone.install:486
+msgid "Australia/Melbourne"
+msgstr "Австралия/Мельбурн"
+
+#: date_timezone/date_timezone.install:487
+msgid "Australia/NSW"
+msgstr "Австралия/NSW"
+
+#: date_timezone/date_timezone.install:488
+msgid "Australia/North"
+msgstr "Австралия/Север"
+
+#: date_timezone/date_timezone.install:489
+msgid "Australia/Perth"
+msgstr "Австралия/Перт"
+
+#: date_timezone/date_timezone.install:490
+msgid "Australia/Queensland"
+msgstr "Австралия/Квинсленд"
+
+#: date_timezone/date_timezone.install:491
+msgid "Australia/South"
+msgstr "Австралия/Юг"
+
+#: date_timezone/date_timezone.install:492
+msgid "Australia/Sydney"
+msgstr "Австралия/Сидней"
+
+#: date_timezone/date_timezone.install:493
+msgid "Australia/Tasmania"
+msgstr "Австралия/Тасмания"
+
+#: date_timezone/date_timezone.install:494
+msgid "Australia/Victoria"
+msgstr "Австралия/Виктория"
+
+#: date_timezone/date_timezone.install:495
+msgid "Australia/West"
+msgstr "Австралия/Запад"
+
+#: date_timezone/date_timezone.install:496
+msgid "Australia/Yancowinna"
+msgstr ""
+
+#: date_timezone/date_timezone.install:497
+msgid "Europe/Amsterdam"
+msgstr "Европа/Амстердам"
+
+#: date_timezone/date_timezone.install:498
+msgid "Europe/Andorra"
+msgstr "Европа/Андорра"
+
+#: date_timezone/date_timezone.install:499
+msgid "Europe/Athens"
+msgstr "Европа/Афины"
+
+#: date_timezone/date_timezone.install:500
+msgid "Europe/Belfast"
+msgstr "Европа/Белфаст"
+
+#: date_timezone/date_timezone.install:501
+msgid "Europe/Belgrade"
+msgstr "Европа/Белград"
+
+#: date_timezone/date_timezone.install:502
+msgid "Europe/Berlin"
+msgstr "Европа/Берлин"
+
+#: date_timezone/date_timezone.install:503
+msgid "Europe/Bratislava"
+msgstr "Европа/Братислава"
+
+#: date_timezone/date_timezone.install:504
+msgid "Europe/Brussels"
+msgstr "Европа/Брюссель"
+
+#: date_timezone/date_timezone.install:505
+msgid "Europe/Bucharest"
+msgstr "Европа/Бухарест"
+
+#: date_timezone/date_timezone.install:506
+msgid "Europe/Budapest"
+msgstr "Европа/Будапешт"
+
+#: date_timezone/date_timezone.install:507
+msgid "Europe/Chisinau"
+msgstr "Европа/Кишинев"
+
+#: date_timezone/date_timezone.install:508
+msgid "Europe/Copenhagen"
+msgstr "Европа/Копенгаген"
+
+#: date_timezone/date_timezone.install:509
+msgid "Europe/Dublin"
+msgstr "Европа/Дублин"
+
+#: date_timezone/date_timezone.install:510
+msgid "Europe/Gibraltar"
+msgstr "Европа/Гибралтар"
+
+#: date_timezone/date_timezone.install:511
+msgid "Europe/Helsinki"
+msgstr "Европа/Хельсинки"
+
+#: date_timezone/date_timezone.install:512
+msgid "Europe/Istanbul"
+msgstr "Europe/Стамбул"
+
+#: date_timezone/date_timezone.install:513
+msgid "Europe/Kaliningrad"
+msgstr "Европа/Калининград"
+
+#: date_timezone/date_timezone.install:514
+msgid "Europe/Kiev"
+msgstr "Европа/Киев"
+
+#: date_timezone/date_timezone.install:515
+msgid "Europe/Lisbon"
+msgstr "Европа/Лисабон"
+
+#: date_timezone/date_timezone.install:516
+msgid "Europe/Ljubljana"
+msgstr "Европа/Любляна"
+
+#: date_timezone/date_timezone.install:517
+msgid "Europe/London"
+msgstr "Европа/Лондон"
+
+#: date_timezone/date_timezone.install:518
+msgid "Europe/Luxembourg"
+msgstr "Европа/Люксембург"
+
+#: date_timezone/date_timezone.install:519
+msgid "Europe/Madrid"
+msgstr "Европа/Мадрид"
+
+#: date_timezone/date_timezone.install:520
+msgid "Europe/Malta"
+msgstr "Европа/Мальта"
+
+#: date_timezone/date_timezone.install:521
+msgid "Europe/Minsk"
+msgstr "Европа/Минск"
+
+#: date_timezone/date_timezone.install:522
+msgid "Europe/Monaco"
+msgstr "Европа/Монако"
+
+#: date_timezone/date_timezone.install:523
+msgid "Europe/Moscow"
+msgstr "Европа/Москва"
+
+#: date_timezone/date_timezone.install:524
+msgid "Europe/Nicosia"
+msgstr "Европа/Никосия"
+
+#: date_timezone/date_timezone.install:525
+msgid "Europe/Oslo"
+msgstr "Европа/Осло"
+
+#: date_timezone/date_timezone.install:526
+msgid "Europe/Paris"
+msgstr "Европа/Париж"
+
+#: date_timezone/date_timezone.install:527
+msgid "Europe/Prague"
+msgstr "Европа/Прага"
+
+#: date_timezone/date_timezone.install:528
+msgid "Europe/Riga"
+msgstr "Европа/Рига"
+
+#: date_timezone/date_timezone.install:529
+msgid "Europe/Rome"
+msgstr "Европа/Рим"
+
+#: date_timezone/date_timezone.install:530
+msgid "Europe/Samara"
+msgstr "Европа/Самара"
+
+#: date_timezone/date_timezone.install:531
+msgid "Europe/San_Marino"
+msgstr "Европа/Сан-Марино"
+
+#: date_timezone/date_timezone.install:532
+msgid "Europe/Sarajevo"
+msgstr "Европа/Сараево"
+
+#: date_timezone/date_timezone.install:533
+msgid "Europe/Simferopol"
+msgstr "Европа/Симферополь"
+
+#: date_timezone/date_timezone.install:534
+msgid "Europe/Skopje"
+msgstr "Европа/Скопье"
+
+#: date_timezone/date_timezone.install:535
+msgid "Europe/Sofia"
+msgstr "Европа/София"
+
+#: date_timezone/date_timezone.install:536
+msgid "Europe/Stockholm"
+msgstr "Европа/Стокгольм"
+
+#: date_timezone/date_timezone.install:537
+msgid "Europe/Tallinn"
+msgstr "Европа/Таллин"
+
+#: date_timezone/date_timezone.install:538
+msgid "Europe/Tirane"
+msgstr ""
+
+#: date_timezone/date_timezone.install:539
+msgid "Europe/Tiraspol"
+msgstr "Европа/Тирасполь"
+
+#: date_timezone/date_timezone.install:540
+msgid "Europe/Uzhgorod"
+msgstr "Европа/Ужгород"
+
+#: date_timezone/date_timezone.install:541
+msgid "Europe/Vaduz"
+msgstr "Europe/Vaduz"
+
+#: date_timezone/date_timezone.install:542
+msgid "Europe/Vatican"
+msgstr "Europe/Ватикан"
+
+#: date_timezone/date_timezone.install:543
+msgid "Europe/Vienna"
+msgstr "Европа/Вена"
+
+#: date_timezone/date_timezone.install:544
+msgid "Europe/Vilnius"
+msgstr "Европа/Вильнюс"
+
+#: date_timezone/date_timezone.install:545
+msgid "Europe/Warsaw"
+msgstr "Европа/Варшава"
+
+#: date_timezone/date_timezone.install:546
+msgid "Europe/Zagreb"
+msgstr "Европа/Загреб"
+
+#: date_timezone/date_timezone.install:547
+msgid "Europe/Zaporozhye"
+msgstr "Европа/Запорожье"
+
+#: date_timezone/date_timezone.install:548
+msgid "Europe/Zurich"
+msgstr "Европа/Цюрих"
+
+#: date_timezone/date_timezone.install:549
+msgid "Indian/Antananarivo"
+msgstr "Индия/Антананариву"
+
+#: date_timezone/date_timezone.install:550
+msgid "Indian/Chagos"
+msgstr ""
+
+#: date_timezone/date_timezone.install:551
+msgid "Indian/Christmas"
+msgstr "Индия/Рождество"
+
+#: date_timezone/date_timezone.install:552
+msgid "Indian/Cocos"
+msgstr "Индия/Кокос"
+
+#: date_timezone/date_timezone.install:553
+msgid "Indian/Comoro"
+msgstr ""
+
+#: date_timezone/date_timezone.install:554
+msgid "Indian/Kerguelen"
+msgstr "Индия/Кергелен"
+
+#: date_timezone/date_timezone.install:555
+msgid "Indian/Mahe"
+msgstr "Индия/Маэ"
+
+#: date_timezone/date_timezone.install:556
+msgid "Indian/Maldives"
+msgstr "Индия/Мальдивы"
+
+#: date_timezone/date_timezone.install:557
+msgid "Indian/Mauritius"
+msgstr "Индус/Маврикий"
+
+#: date_timezone/date_timezone.install:558
+msgid "Indian/Mayotte"
+msgstr ""
+
+#: date_timezone/date_timezone.install:559
+msgid "Indian/Reunion"
+msgstr ""
+
+#: date_timezone/date_timezone.install:560
+msgid "Pacific/Apia"
+msgstr "Tихоокеанский/Апиа"
+
+#: date_timezone/date_timezone.install:561
+msgid "Pacific/Auckland"
+msgstr "Pacific/Auckland"
+
+#: date_timezone/date_timezone.install:562
+msgid "Pacific/Chatham"
+msgstr "Tихоокеанский/Чатем"
+
+#: date_timezone/date_timezone.install:563
+msgid "Pacific/Easter"
+msgstr "Tихоокеанский/Пасха"
+
+#: date_timezone/date_timezone.install:564
+msgid "Pacific/Efate"
+msgstr "Tихоокеанский/Эфате"
+
+#: date_timezone/date_timezone.install:565
+msgid "Pacific/Enderbury"
+msgstr "Tихоокеанский/Енденбург"
+
+#: date_timezone/date_timezone.install:566
+msgid "Pacific/Fakaofo"
+msgstr ""
+
+#: date_timezone/date_timezone.install:567
+msgid "Pacific/Fiji"
+msgstr "Tихоокеанский/Фиджи"
+
+#: date_timezone/date_timezone.install:568
+msgid "Pacific/Funafuti"
+msgstr "Tихоокеанский/Фунафути"
+
+#: date_timezone/date_timezone.install:569
+msgid "Pacific/Galapagos"
+msgstr "Tихоокеанский/Галапагос"
+
+#: date_timezone/date_timezone.install:570
+msgid "Pacific/Gambier"
+msgstr ""
+
+#: date_timezone/date_timezone.install:571
+msgid "Pacific/Guadalcanal"
+msgstr "Tихоокеанский/Гуадалканал"
+
+#: date_timezone/date_timezone.install:572
+msgid "Pacific/Guam"
+msgstr "Tихоокеанский/Гуам"
+
+#: date_timezone/date_timezone.install:573
+msgid "Pacific/Honolulu"
+msgstr "Tихоокеанский/Гонолулу"
+
+#: date_timezone/date_timezone.install:574
+msgid "Pacific/Johnston"
+msgstr "Tихоокеанский/Джонстон"
+
+#: date_timezone/date_timezone.install:575
+msgid "Pacific/Kiritimati"
+msgstr ""
+
+#: date_timezone/date_timezone.install:576
+msgid "Pacific/Kosrae"
+msgstr ""
+
+#: date_timezone/date_timezone.install:577
+msgid "Pacific/Kwajalein"
+msgstr "Tихоокеанский/Кваджалейн"
+
+#: date_timezone/date_timezone.install:578
+msgid "Pacific/Majuro"
+msgstr ""
+
+#: date_timezone/date_timezone.install:579
+msgid "Pacific/Marquesas"
+msgstr "Тихоокеанский/Маркизы"
+
+#: date_timezone/date_timezone.install:580
+msgid "Pacific/Midway"
+msgstr ""
+
+#: date_timezone/date_timezone.install:581
+msgid "Pacific/Nauru"
+msgstr "Tихоокеанский/Науру"
+
+#: date_timezone/date_timezone.install:582
+msgid "Pacific/Niue"
+msgstr "Tихоокеанский/Ниуэ"
+
+#: date_timezone/date_timezone.install:583
+msgid "Pacific/Norfolk"
+msgstr "Tихоокеанский/Норфолк"
+
+#: date_timezone/date_timezone.install:584
+msgid "Pacific/Noumea"
+msgstr "Tихоокеанский/Нумеа"
+
+#: date_timezone/date_timezone.install:585
+msgid "Pacific/Pago_Pago"
+msgstr "Tихоокеанский/Паго-Паго"
+
+#: date_timezone/date_timezone.install:586
+msgid "Pacific/Palau"
+msgstr "Tихоокеанский/Палау"
+
+#: date_timezone/date_timezone.install:587
+msgid "Pacific/Pitcairn"
+msgstr "Тихий океан/Питкэрн"
+
+#: date_timezone/date_timezone.install:588
+msgid "Pacific/Ponape"
+msgstr "Tихоокеанский/Понапе"
+
+#: date_timezone/date_timezone.install:589
+msgid "Pacific/Port_Moresby"
+msgstr "Tихоокеанский/Порт-Морсби"
+
+#: date_timezone/date_timezone.install:590
+msgid "Pacific/Rarotonga"
+msgstr "Tихоокеанский/Раротонга"
+
+#: date_timezone/date_timezone.install:591
+msgid "Pacific/Saipan"
+msgstr "Tихоокеанский/Сайпан"
+
+#: date_timezone/date_timezone.install:592
+msgid "Pacific/Samoa"
+msgstr "США/Самоа"
+
+#: date_timezone/date_timezone.install:593
+msgid "Pacific/Tahiti"
+msgstr "Tихоокеанский/Таити"
+
+#: date_timezone/date_timezone.install:594
+msgid "Pacific/Tarawa"
+msgstr "Tихоокеанский/Тарава"
+
+#: date_timezone/date_timezone.install:595
+msgid "Pacific/Tongatapu"
+msgstr "Tихоокеанский/Тонгатапу"
+
+#: date_timezone/date_timezone.install:596
+msgid "Pacific/Truk"
+msgstr "Тихий океан/Трук."
+
+#: date_timezone/date_timezone.install:597
+msgid "Pacific/Wake"
+msgstr "Тихий океан/Уэйк"
+
+#: date_timezone/date_timezone.install:598
+msgid "Pacific/Wallis"
+msgstr "Tихоокеанский/Воллис"
+
+#: date_timezone/date_timezone.install:599
+msgid "Pacific/Yap"
+msgstr "Tихоокеанский/Тявк"
+
+#: date_timezone/date_timezone.install:45
+msgid "The Date Timezone module requires you to !link."
+msgstr ""
+
+#: date_timezone/date_timezone.install:45
+msgid "set the site timezone name"
+msgstr ""
+
+#: date_timezone/date_timezone.install:51
+msgid "The !link may not be correct."
+msgstr "!link может быть не корректна."
+
+#: date_timezone/date_timezone.install:51
+msgid "site timezone name"
+msgstr "название часового пояса сайта"
+
+#: date_timezone/date_timezone.install:58
+msgid "Date Timezone requirements"
+msgstr ""
+
+#: date_timezone/date_timezone.module:66
+msgid ""
+"Select the default site time zone. If in doubt, choose the timezone "
+"that is closest to your location which has the same rules for daylight "
+"saving time."
+msgstr ""
+"Выберите часовой пояс сайта. Если не "
+"знаете точно, выберите ближайший к "
+"месторасположению сайта, у которого "
+"такое же время."
+
+#: date_timezone/date_timezone.module:267
+msgid ""
+"Detected time zone: %timezone; client date: %date; abbreviation: "
+"%abbreviation; offset: %offset; daylight saving time: "
+"%is_daylight_saving_time."
+msgstr ""
+
+#: date_timezone/date_timezone.module:28
+msgid "User timezone"
+msgstr "Часовой пояс пользователя"
+
+#: date_timezone/date_timezone.info:0
+msgid ""
+"Needed when using Date API. Overrides site and user timezone handling "
+"to set timezone names instead of offsets."
+msgstr ""
+"Требуется при использовании Date API. "
+"Изменяет отображение часового пояса "
+"сайта и пользователя, отображая "
+"название вместо разницы во времени."
+
+#: date_timezone/date_timezone.install:600
+msgid "Pacific/French_Polynesia-Marquesas_Islands"
+msgstr ""
+"Тихий "
+"океан/Французская_Полинезия-Маркизские_острова"
+
+#: date_timezone/date_timezone.install:601
+msgid "UTC"
+msgstr "Всемирное время"
+
+#: date_timezone/date_timezone.module:18
+msgid ""
+"The Date Timezone module requires you to <a href=\"@link\">set the "
+"site timezone name</a>."
+msgstr ""
+
+#: date_timezone/date_timezone.module:121
+msgid ""
+"Select your current local time. If in doubt, choose the timezone that "
+"is closest to your location which has the same rules for daylight "
+"saving time. Dates and times throughout this site will be displayed "
+"using this time zone."
+msgstr ""
+"Выберите ваш часовой пояс. Если не "
+"знаете точно, выберите ближайшую к вам "
+"зону, где время такое же, как у вас. "
+"Дата и время на этом сайте "
+"отображаются с учетом этого часового "
+"пояса."
+

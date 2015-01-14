@@ -1,0 +1,5 @@
+; $Id: 
+name = Obyvashka custom module
+description = "Custom module for different purposes of Obyvashka site."
+core = 6.x
+

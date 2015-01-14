@@ -1,0 +1,584 @@
+# Russian translation of date (6.x-2.4)
+# Copyright (c) 2010 by the Russian translation team
+# Generated from file: date_tools.module,v 1.1.2.16 2009/07/24 18:48:14 karens
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: date (6.x-2.4)\n"
+"POT-Creation-Date: 2010-02-15 00:35+0300\n"
+"PO-Revision-Date: 2009-12-26 14:58+0300\n"
+"Language-Team: Russian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=((((n%10)==1)&&((n%100)!=11))?(0):(((((n%10)>=2)&&((n%10)<=4))&&(((n%100)<10)||((n%100)>=20)))?(1):2));\n"
+
+#: date_tools/date_tools.module:232
+msgid "Advanced options"
+msgstr "Дополнительные настройки"
+
+#: date_tools/date_tools.module:131
+msgid "Operations"
+msgstr "Действия"
+
+#: date_tools/date_tools.module:60,1091,1068
+msgid "Import"
+msgstr "Импорт"
+
+#: date_tools/date_tools.module:973
+msgid "Anonymous"
+msgstr "Гость"
+
+#: date_tools/date_tools.module:959
+msgid "Categories"
+msgstr "Категории"
+
+#: date_tools/date_tools.module:131
+msgid "Description"
+msgstr "Описание"
+
+#: date_tools/date_tools.module:969
+msgid "Authored by"
+msgstr "Автор"
+
+#: date_tools/date_tools.module:975
+msgid "Published"
+msgstr "Опубликовано"
+
+#: date_tools/date_tools.module:274,263,258,225,1088
+msgid "Yes"
+msgstr "Да"
+
+#: date_tools/date_tools.module:274,263,258,225,1088
+msgid "No"
+msgstr "Нет"
+
+#: date_tools/date_tools.module:978
+msgid "Promoted to front page"
+msgstr "Помещать на главную"
+
+#: date_tools/date_tools.module:981
+msgid "Sticky at top of lists"
+msgstr "Закреплять вверху списков"
+
+#: date_tools/date_tools.module:984
+msgid "Create new revision"
+msgstr "Создавать новую редакцию"
+
+#: date_tools/date_tools.module:527
+msgid "Content"
+msgstr "Cодержимое"
+
+#: date_tools/date_tools.module:972
+msgid "Leave blank for %anonymous."
+msgstr ""
+"Если поле оставить пустым, автором "
+"будет %anonymous."
+
+#: date_tools/date_tools.module:850
+msgid "Add"
+msgstr "Добавить"
+
+#: date_tools/date_tools.module:178
+msgid "Content type"
+msgstr "Тип материала"
+
+#: date_tools/date_tools.module:528,131
+msgid "Calendar"
+msgstr "Календарь"
+
+#: date_tools/date_tools.module:908
+msgid "Description field"
+msgstr "Описание поля"
+
+#: date_tools/date_tools.module:895,833
+msgid ""
+"There are no date fields in this database to import the data into. "
+"Please add a date field to the desired node types and be sure to "
+"indicate it uses both a \"from\" and a \"to\" date."
+msgstr ""
+
+#: date_tools/date_tools.module:837
+msgid "Target type"
+msgstr ""
+
+#: date_tools/date_tools.module:837,1064
+msgid "Source type"
+msgstr ""
+
+#: date_tools/date_tools.module:901,200
+msgid "Date field"
+msgstr ""
+
+#: date_tools/date_tools.module:903
+msgid "The field which will contain the source dates in target content type."
+msgstr ""
+
+#: date_tools/date_tools.module:910
+msgid ""
+"The text or body field which will contain the source description in "
+"the target content type."
+msgstr ""
+
+#: date_tools/date_tools.module:916
+msgid "Url field"
+msgstr "Url поле"
+
+#: date_tools/date_tools.module:918
+msgid ""
+"The text or link field which will contain the source url in the target "
+"content type."
+msgstr ""
+
+#: date_tools/date_tools.module:923
+msgid "Location field"
+msgstr ""
+
+#: date_tools/date_tools.module:925
+msgid ""
+"The text field which will contain the source location text in the "
+"target content type."
+msgstr ""
+
+#: date_tools/date_tools.module:930
+msgid "Uid field"
+msgstr "Uid поле"
+
+#: date_tools/date_tools.module:932
+msgid ""
+"The text field which will contain the source uid in the target content "
+"type."
+msgstr ""
+
+#: date_tools/date_tools.module:960
+msgid "Select the categories that should be used for the imported nodes."
+msgstr ""
+
+#: date_tools/date_tools.module:1084
+msgid "!type Fields"
+msgstr ""
+
+#: date_tools/date_tools.module:1035
+msgid ""
+"There is no event table in this database. No event import options are "
+"available."
+msgstr ""
+"Отсутствует таблица событий в базе "
+"данных. Настройки импорта событий "
+"недоступны."
+
+#: date_tools/date_tools.module:1058
+msgid ""
+"There are no event nodes in this database. No event import options are "
+"available."
+msgstr ""
+
+#: date_tools/date_tools.module:1088
+msgid "Delete original event?"
+msgstr "Удалить оригинальное событие?"
+
+#: date_tools/date_tools.module:1088
+msgid ""
+"Should the original entry be deleted once it has been copied to the "
+"new content type? If so, be sure to back up your database first."
+msgstr ""
+
+#: date_tools/date_tools.module:1089
+msgid "Limit"
+msgstr "Лимит"
+
+#: date_tools/date_tools.module:1089
+msgid "The maximum number of nodes to convert in this pass."
+msgstr ""
+
+#: date_tools/date_tools.module:1090
+msgid "Starting nid"
+msgstr ""
+
+#: date_tools/date_tools.module:1090
+msgid "Convert nodes with nids greater than or equal to this number."
+msgstr ""
+
+#: date_tools/date_tools.module:1136
+msgid "No events have been converted."
+msgstr ""
+
+#: date_tools/date_tools.module:1273,1263
+msgid "view"
+msgstr "просмотреть"
+
+#: date_tools/date_tools.module:541
+msgid "Views"
+msgstr "Представления"
+
+#: date_tools/date_tools.module:564
+msgid "disabled"
+msgstr "отключено"
+
+#: date_tools/date_tools.module:552
+msgid "enabled"
+msgstr "включено"
+
+#: date_tools/date_tools.module:893
+msgid "body"
+msgstr "текст"
+
+#: date_tools/date_tools.module:1133
+msgid "Start date"
+msgstr "Дата начала"
+
+#: date_tools/date_tools.module:1133
+msgid "End date"
+msgstr "Дата окончания"
+
+#: date_tools/date_tools.module:131
+msgid "Content Type"
+msgstr "Тип контента"
+
+#: date_tools/date_tools.module:533
+msgid "Signup"
+msgstr ""
+
+#: date_tools/date_tools.module:293
+msgid ""
+"The machine-readable name must contain only lowercase letters, "
+"numbers, and underscores."
+msgstr ""
+"Машинное имя может содержать только "
+"буквы в нижнем регистре, цифры и знаки "
+"подчёркивания."
+
+#: date_tools/date_tools.module:1133
+msgid "Node Title"
+msgstr "Заголовок Материала"
+
+#: date_tools/date_tools.module:529
+msgid "Calendar iCal"
+msgstr ""
+
+#: date_tools/date_tools.module:542
+msgid "Views UI"
+msgstr "Views UI"
+
+#: date_tools/date_tools.module:84
+msgid "CSV import"
+msgstr "CSV импорт"
+
+#: date_tools/date_tools.module:537
+msgid "Feed API"
+msgstr ""
+
+#: date_tools/date_tools.module:532
+msgid "Calendar Popup"
+msgstr "Всплывающий календарь"
+
+#: date_tools/date_tools.module:41
+msgid "About"
+msgstr "О"
+
+#: date_tools/date_tools.module:842
+msgid ""
+"Only content types with date fields appear in this list as possible "
+"target types."
+msgstr ""
+
+#: date_tools/date_tools.module:851
+msgid ""
+"If your desired target type does not already have a date field, follow "
+"this link and select a content type to add a date field to that type."
+msgstr ""
+
+#: date_tools/date_tools.module:857
+msgid "Add new date field"
+msgstr ""
+
+#: date_tools/date_tools.module:1011
+msgid ""
+"Importing dates into CCK from a comma separated file can be done using "
+"the <a href=\"@link\">Node Import module</a>."
+msgstr ""
+
+#: date_tools/date_tools.module:1018
+msgid "Use <a href=\"@link\">Feed API</a> to import ical dates into nodes."
+msgstr ""
+
+#: date_tools/date_tools.module:1023
+msgid ""
+"Enable the <a "
+"href=\"http://drupal.org/project/advanced_help\">Advanced help "
+"module</a> for more instructions."
+msgstr ""
+
+#: date_tools/date_tools.module:10
+msgid "Tools for creating and importing dates and calendars."
+msgstr ""
+
+#: date_tools/date_tools.module:15
+msgid "The following modules are required for the wizard to work:"
+msgstr ""
+
+#: date_tools/date_tools.module:20
+msgid ""
+"Only a limited set of options are displayed here to make this easy to "
+"set up. Once the date has been created you will be able to make other "
+"changes to the date settings and add other fields to your new content "
+"type on the Manage fields screen, and make changes to the calendar on "
+"the Views edit page."
+msgstr ""
+
+#: date_tools/date_tools.module:106
+msgid ""
+"Dates and calendars can be complicated to set up. The !date_wizard "
+"makes it easy to create a simple date content type and related "
+"calendar."
+msgstr ""
+
+#: date_tools/date_tools.module:106,50
+msgid "Date wizard"
+msgstr "Помощник Даты"
+
+#: date_tools/date_tools.module:183
+msgid "Content type name"
+msgstr "Имя типа контента"
+
+#: date_tools/date_tools.module:189
+msgid "Content type label"
+msgstr "Метка типа контента"
+
+#: date_tools/date_tools.module:194
+msgid "A date content type that is linked to a Views calendar."
+msgstr ""
+
+#: date_tools/date_tools.module:195
+msgid "Content type description"
+msgstr "Описания типа контента"
+
+#: date_tools/date_tools.module:206
+msgid "Date field name"
+msgstr "Имя поля Даты"
+
+#: date_tools/date_tools.module:207
+msgid ""
+"Machine-readable name. Allowed values: (a-z, 0-9, _) Must not be an "
+"existing field name."
+msgstr ""
+
+#: date_tools/date_tools.module:213
+msgid "Date field label"
+msgstr ""
+
+#: date_tools/date_tools.module:214
+msgid "The human-readable label for this field."
+msgstr ""
+
+#: date_tools/date_tools.module:238
+msgid "Date field type"
+msgstr ""
+
+#: date_tools/date_tools.module:220
+msgid "Date widget type"
+msgstr ""
+
+#: date_tools/date_tools.module:252
+msgid "Date timezone handling"
+msgstr ""
+
+#: date_tools/date_tools.module:226
+msgid "Show repeating date options"
+msgstr ""
+
+#: date_tools/date_tools.module:259
+msgid "Create a calendar for this date field"
+msgstr ""
+
+#: date_tools/date_tools.module:265
+msgid "Add calendar blocks to the current theme"
+msgstr ""
+
+#: date_tools/date_tools.module:270
+msgid "Location field name"
+msgstr ""
+
+#: date_tools/date_tools.module:276
+msgid "Turn on signup"
+msgstr ""
+
+#: date_tools/date_tools.module:307
+msgid "Change the calendar as needed and save the view."
+msgstr ""
+
+#: date_tools/date_tools.module:530
+msgid "Date Repeat"
+msgstr ""
+
+#: date_tools/date_tools.module:535
+msgid "Optionwidgets"
+msgstr ""
+
+#: date_tools/date_tools.module:536
+msgid "Nodereference"
+msgstr ""
+
+#: date_tools/date_tools.module:538
+msgid "Parser iCal"
+msgstr ""
+
+#: date_tools/date_tools.module:539
+msgid "Feed API Node"
+msgstr ""
+
+#: date_tools/date_tools.module:540
+msgid "Feed API Mapper"
+msgstr ""
+
+#: date_tools/date_tools.module:1020
+msgid ""
+"See complete instructions on how to do it in the <a "
+"href=\"@link\">Advanced help</a>."
+msgstr ""
+
+#: date_tools/date_tools.module:1051
+msgid ""
+"Create a new CCK content type to import your events into, or, if you "
+"do not want to create new nodes for your events, add a date field to "
+"the existing event type. Make sure the target content type has a date "
+"field that has an optional or required To date so it can accept the "
+"From date and To date of the event. If your source event has its own "
+"timezone field, make sure you set the target date timezone handling to "
+"'date'. Test the target type by trying to create a node manually and "
+"make sure all the right options are available in the form before "
+"attempting an import."
+msgstr ""
+
+#: date_tools/date_tools.module:1051
+msgid ""
+"The import will create new nodes and trigger all related hooks, so you "
+"may want to turn off automatic email messaging for this node type "
+"while performing the import!"
+msgstr ""
+
+#: date_tools/date_tools.module:1269,1259
+msgid "date_tools"
+msgstr "date_tools"
+
+#: date_tools/date_tools.module:1259
+msgid "!type: %title has been created."
+msgstr ""
+
+#: date_tools/date_tools.module:1269
+msgid "!type: %title has been updated."
+msgstr ""
+
+#: date_tools/date_tools.module:1132
+msgid "1 event has been converted."
+msgid_plural "@count events have been converted."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: date_tools/date_tools.module:51
+msgid "Easy creation of date content types and calendars."
+msgstr ""
+
+#: date_tools/date_tools.module:68
+msgid "iCal import"
+msgstr ""
+
+#: date_tools/date_tools.module:76
+msgid "Event import"
+msgstr "Импорт событий"
+
+#: date_tools/date_tools.module:1133
+msgid "Original Node ID"
+msgstr "Исходный ID материала"
+
+#: date_tools/date_tools.module:1133
+msgid "New Node ID"
+msgstr "Новый ID материала"
+
+#: date_tools/date_tools.module:296
+msgid "This field name already exists."
+msgstr ""
+
+#: date_tools/date_tools.module:18
+msgid ""
+"Fill out the following form to auto-create a date content type, with a "
+"datetime field and matching pre-configured calendar. A calendar and "
+"upcoming events block will be created, an ical feed will be added to "
+"the calendar, and the mini calendar, calendar legend, and upcoming "
+"events blocks will be added to the sidebar of the default theme. Nodes "
+"created from this new content type will include a link to the "
+"calendar, and the calendar will have a link to the 'add new date' "
+"form. If the Signup module is enabled, Signups will also be enabled "
+"for this field. You can also add new date fields to an existing "
+"content type by entering the existing content type name instead of "
+"creating a new one."
+msgstr ""
+
+#: date_tools/date_tools.module:120
+msgid ""
+"The calendar %view is a default calendar created for the content type "
+"%type_name."
+msgstr ""
+
+#: date_tools/date_tools.module:121
+msgid "remove !view"
+msgstr "удалить !view"
+
+#: date_tools/date_tools.module:149
+msgid "Are you sure you want to remove the view %view?"
+msgstr ""
+
+#: date_tools/date_tools.module:167
+msgid "Removed calendar %calendar."
+msgstr ""
+
+#: date_tools/date_tools.module:184
+msgid ""
+"Machine-readable name. Allowed values: (a-z, 0-9, _). If this is not "
+"an existing content type, the content type will be created."
+msgstr ""
+
+#: date_tools/date_tools.module:190
+msgid ""
+"The human-readable name for this content type. Only needed when "
+"creating a new content type."
+msgstr ""
+
+#: date_tools/date_tools.module:196
+msgid ""
+"A description for the content type. Only needed when creating a new "
+"content type."
+msgstr ""
+
+#: date_tools/date_tools.module:239
+msgid ""
+"The recommend type is Datetime, except for historical dates or dates "
+"with only year or month granularity. Older or incomplete dates should "
+"use the Date type (an ISO date)."
+msgstr ""
+
+#: date_tools/date_tools.module:253
+msgid ""
+"Timezone handling should be set to 'none' for granularity without time "
+"elements."
+msgstr ""
+
+#: date_tools/date_tools.module:290
+msgid ""
+"This content type name already exists, adding new field to existing "
+"content type."
+msgstr ""
+
+#: date_tools/date_tools.module:299
+msgid "Timezone handling must be none for granularity without time."
+msgstr ""
+
+#: date_tools/date_tools.module:92
+msgid "Remove calendar"
+msgstr ""
+
+#: date_tools/date_tools.module:27
+msgid "administer date tools"
+msgstr ""
+

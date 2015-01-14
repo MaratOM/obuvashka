@@ -1,0 +1,24 @@
+name = Obyvashka
+description = Theme for company "Obyvashka"
+version = VERSION
+core = 6.x
+engine = phptemplate
+stylesheets[all][] = reset.css
+stylesheets[all][] = style.css
+stylesheets[all][] = menu.css
+
+scripts[] = js/bg.js
+scripts[] = js/jquery.easing.1.3.js
+scripts[] = js/menu.js
+
+regions[header] = Header
+regions[left] = Left Sidebar
+regions[left_bottom] = Left Bottom Sidebar
+regions[right] = Right Sidebar
+regions[content_top] = Content Top
+regions[content] = Content
+regions[footer] = Footer
+
+
+
+

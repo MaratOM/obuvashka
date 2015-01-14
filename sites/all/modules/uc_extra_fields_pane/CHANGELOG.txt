@@ -1,0 +1,120 @@
+Extra Fields Pane 6.x-2.0-alpha1, 2011-10-16
+------------------------------
+
+New features since 6.x-1.0:
+- Address fields appear in original delivery and/or billing panes.
+- Support of the field types textfield, select list, checkbox,
+  constant, php string and php select list.
+- Integration with Ubercart Addresses 6.x-1.0 (for a part).
+- Ability to change the order (weight) of address fields.
+- Availability of an extra information pane.
+- Integration with i18n (for field label and description).
+- Normalized uc_extra_fields_values table: Extra Fields Pane will
+  no longer add columns when adding fields.
+
+Bugfixes:
+- Issue #1278348 by MegaChriz: field db_name now has a max length of
+  32 characters.
+
+Detailed list of all changes:
+#831134 by panthar, blackice78: initial release of DRUPAL-6--2 branch
+#831134 by MegaChriz:
+  - added 'order addresses'-functionality
+  - moved address fields to original checkout panes
+  - made dependency on Ubercart 2.3 because a hook introduced in that 
+    version is now used
+  - added function comments (added @param, @return, @see)
+  - reordered functions
+  - moved admin functions to uc_extra_fields_pane.admin.inc
+  - improved part of code following Drupal coding standards
+  - little fixes
+#831134 by mrfelton:
+  - Added support for checkboxes.
+  - Rework widget settings to use defined constants.
+  - Code standards review (coder).
+#831134 by MegaChriz:
+  - moved address fields adding to 'Address fields'-page
+  - changed admin interface
+  - introduced common API function for field forms (add/edit/delete)
+  - introduced API function to generate fields
+  - an address field now comes in both panes by default
+  - fixed 'my billing information is the same as my delivery information'
+#831134 by panthar: added token support
+#831134 by MegaChriz:
+  - changed uc_extra_fields_values table completely
+  - added support for extra address fields in token hooks
+  - fixes in order handler function
+#831134 by MegaChriz:
+  - moved non-hook functions to separate files to increase performance
+  - made changes in API functions
+#914806 by MegaChriz:
+  - added views integration
+#913852 by MegaChriz:
+  - fixed 'saved addresses' drop down
+#985388 by EvanDonovan, MegaChriz:
+  - fixed a bug that caused a fatal PHP error during checkout because
+    a file didn't got included.
+by MegaChriz:
+  - an extra row (':') is no longer added when chosen field type is
+    constant or PHP constant.
+  - removed theme function theme_uc_extra_fields_pane(), replaced by
+    theme_uc_extra_fields_pane_checkout_pane(), which is added to the
+    file 'checkout_pane.inc'.
+  - various other fixes
+#1015452 by MegaChriz:
+  - Fixed exposed views filter for Extra Fields Pane selection fields
+#907446 by MegaChriz:
+  - Added 'Display options' feature.
+by MegaChriz:
+  - Added hooks documentation.
+#1008138 by blackice78:
+  - Fixed checkbox field type feature.
+#1112254 by blackice78:
+  - Added i18nstring integration for field label and description.
+by MegaChriz:
+  - Bugfix UC Addresses integration: do not add address fields to user
+    register form if no address is required upon registration.
+  - Bugfix: don't make fields from Extra Fields Pane required on order
+    edit pages.
+  - Other little fixes (code refactoring).
+#1042076 by mrfelton, MegaChriz:
+  - Do not output field label with colon in theme functions if field 
+    label is empty.
+#1160556 by MegaChriz:
+  - Changed behaviour of select fields. Options are now defined as 
+    safe_key|label instead of the opposite it was.
+  - Made options labels translatable with i18n.
+  - Added Views field handler for selection fields: in Views labels
+    of option values are shown instead of the key.
+  - Fix for select fields on order edit page: if the saved value
+    isn't available anymore as an option (if for example that option
+    has been deleted), the saved value is now added as an option, so
+    the saved value won't be overwritten when editing the order.
+#1200986 by MegaChriz:
+  - Added raw user input tokens for field values.
+by MegaChriz:
+  - Small fix in token values: empty values will no longer result in 
+    "n/a" being displayed.
+#1212162 by MegaChriz:
+  - fixed populating of checkboxes.
+#1253706 by MegaChriz:
+  - Added field types documentation in the README.txt.
+  - Added help via hook_help().
+  - Added validation for PHP fields: now is checked if PHP-code is
+    enclosed in php tags.
+  - Added validation for select fields: now is checked if the
+    select field has an "empty" option (e.g. "Please select")
+    when the field is marked as required. 
+by MegaChriz:
+  - Little bugfix for select fields on order edit page: if there
+    was no saved value or an empty value for that field, the select
+    field no longer displays "Deleted option:".
+  - Checked all strings for translatability and updated some of them.
+#1278348 by MegaChriz:
+ -  db_name field now has a max length of 32 characters (database update).
+by MegaChriz:
+  - Fixed link to help page: this was leading to a non existing page
+    when the core help module was disabled.
+#831134 by MegaChriz:
+  - Wrote an upgrade script from 6.x-1.x to 6.x-2.x. Some of the previous
+    update functions were changed to fit the upgrade at best.

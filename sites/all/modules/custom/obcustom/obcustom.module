@@ -1,0 +1,625 @@
+<?php 
+
+define('SEASON_VID', 4);
+define('BRAND_VID', 9);
+define('TYPE_VID', 10);
+
+function obcustom_menu() {
+  $items = array();
+
+  $items['admin/order/salecheck/%'] = array(
+    'title' => 'Sale check', 
+    'description' => 'Sale check to print.', 
+    'page callback' => '_obcustom_salecheck',
+    'page arguments' => array(3),     
+    'access arguments' => array('print sale check'), 
+    'type' => MENU_CALLBACK,
+  );
+
+  return $items;
+}
+
+function obcustom_perm() {
+  return array('print sale check');
+}
+
+function obcustom_nodeapi(&$node, $op, $a3 = NULL, $a4 = NULL) {
+  if($node->type == 'product') {
+    switch ($op) {
+      case 'view':
+        if($node->list_price != 0.00000) {
+          $node->content['sell_price']['#value'] = '<div class="product-info product sell">
+          <span class="uc-price-product uc-price-sell uc-price">
+          <span class="price-prefixes">Цена: </span>
+          <span class="price-stroke">' . (int)$node->list_price . '</span>
+          <span class="new-price">' . (int)$node->sell_price . ' руб.</span>
+          </span></div>';
+        }
+        break;
+    }
+  }
+}
+
+function obcustom_block($op = 'list', $delta = 0, $edit = array()) {
+  if ($op == 'list') {
+    $blocks[0] = array(
+      'info' => t('Seasons list'), 
+      'weight' => 0, 
+      'status' => 1, 
+      'region' => 'left',
+    );
+
+    $blocks[1] = array(
+      'info' => t('Brands list'), 
+      'weight' => 0, 
+      'status' => 1, 
+      'region' => 'left',
+    );
+    
+    $blocks[2] = array(
+      'info' => t('Shoes types list'), 
+      'weight' => 0, 
+      'status' => 1, 
+      'region' => 'left',
+    );   
+
+    $blocks[3] = array(
+      'info' => t('Seasons line list'), 
+      'weight' => 0, 
+      'status' => 1, 
+      'region' => 'left',
+    ); 
+
+    $blocks[5] = array(
+      'info' => t('View by season'), 
+      'weight' => 0, 
+      'status' => 1, 
+      'region' => 'content',
+    );     
+
+    return $blocks;
+  }
+  else if ($op == 'view') {
+    switch ($delta) {
+      case 0:
+        $block = array(
+          'subject' => t('Seasons list'), 
+          'content' => _obcustom_terms_list(SEASON_VID),
+        );
+        break;
+      case 1:
+        $block = array(
+          'subject' => t('Brands list'), 
+          'content' => _obcustom_terms_list(BRAND_VID, TRUE),
+        );
+        break;
+      case 2:
+        $block = array(
+          'subject' => t('Shoes types list'), 
+          'content' => _obcustom_terms_list(TYPE_VID, TRUE, TRUE),
+        );
+        break; 
+      case 3:
+        $block = array(
+          'subject' => t('Seasons line list'), 
+          'content' => _obcustom_terms_list(SEASON_VID, FALSE, TRUE),
+        );
+        break;
+      case 5:
+        $block = array(
+          'subject' => t('View by season'), 
+          'content' => _obcustom_season_view(),
+        );
+        break;        
+    }
+    return $block;
+  }
+}
+
+function _obcustom_terms_list($vid, $tree = FALSE, $line = FALSE) {
+  $terms_list = array();
+
+  $sql = "SELECT tid, name FROM {term_data} WHERE vid = %d";
+  $res = db_query($sql, $vid);
+  while ($row = db_fetch_object($res)) {
+    if($vid == BRAND_VID && arg(1) && arg(0) != 'node'){
+      $sql = "SELECT nid
+            FROM {term_node}
+            WHERE tid = %d
+            AND nid
+            IN (
+              SELECT nid
+              FROM {term_node}
+              WHERE tid = %d
+            )
+            LIMIT 1 ";
+       $result = db_result(db_query($sql, $row->tid, arg(1)));
+       if($result) {
+         $terms_list[$row->tid] = $row->name;
+       }
+    }
+    else {
+      $terms_list[$row->tid] = $row->name;
+    }
+  }
+  $terms_line = '';
+  $i = 0;
+  $path_parts = array();
+  while ($path_part = arg($i)) {
+    $path_parts[] = $path_part;
+    $i++;
+  }
+  $prod_path = $tree ? 'products/' : 'product-type/'; 
+  if($tree){
+    $first_path = isset($path_parts[1]) ? $path_parts[1] . '/' : '';
+  }
+  if($line) {
+    foreach ($terms_list as $term_tid => $term_name) {
+      $terms_line .= l($term_name . '  ', $prod_path . $first_path . $term_tid,  array('attributes' => array('class' => 'seasons-line')));   
+    }    
+  }
+  else {
+    if($vid == BRAND_VID && isset($path_parts[1]) && is_numeric($path_parts[1]) && arg(0) != 'node'  && arg(0) != 'user') {
+      $terms_line .= '<p>' . l(_obcustom_termname_by_tid(arg(1)), $prod_path . $first_path, array('attributes' => array('class' => 'season'))) . '</p>';
+
+      foreach ($terms_list as $term_tid => $term_name) {
+        $terms_line .= '<p>' . l($term_name, $prod_path . $first_path . $term_tid) . '</p>';   
+      }  
+    } 
+  } 
+  
+  _obcustom_set_breadcrumbs();
+  
+  return $terms_line;    
+} 
+
+function _obcustom_set_breadcrumbs() {
+  /* Setting breadcrumbs */
+  $i = 1;
+  $crumbs = array();
+  $crumbs[] = l('Интернет-магазин', 'products');
+  if(arg(0) != 'node') {
+    while ($term_id = arg($i)) {
+      if(is_numeric($term_id)) {
+        $sql = "SELECT name FROM {term_data} WHERE tid = %d";
+        $term_name = db_result(db_query($sql, $term_id));
+        $crumbs[] = l($term_name, 'products/' . $term_path_parts . $term_id);
+        $term_path_parts .= $term_id . '/';        
+      }
+      $i++;
+    }
+  }
+  else {
+    $term_path_parts = '';
+    $alias = drupal_get_path_alias('node/' . arg(1));
+    $alias_arr = explode('/', $alias);
+    array_shift($alias_arr);
+    $node_id = array_pop($alias_arr);
+    foreach ($alias_arr as $term_id) {
+      $sql = "SELECT name FROM {term_data} WHERE tid = %d";
+      $term_name = db_result(db_query($sql, $term_id));
+      $crumbs[] = l($term_name, 'products/' . $term_path_parts . $term_id);
+      $term_path_parts .= $term_id . '/';
+    }
+    $node_loaded = node_load($node_id);
+    $crumbs[] = l($node_loaded->title, $alias);
+  }
+  drupal_set_breadcrumb($crumbs);
+}
+
+function _obcustom_season_view() {
+  $current_tid = 0;
+  $type_brands_count = array();
+  $season_view_data = array();
+  $season_tid = arg(1);
+// get all types for current season
+  $sql = "SELECT tid, nid 
+  				FROM  {term_node} 
+  				WHERE tid IN 
+  					( SELECT tid FROM {term_data} WHERE vid = %d ) 
+  				AND nid IN  
+  					( SELECT nid FROM {term_node} WHERE tid = %d ) 
+  				";
+  
+  $res = db_query($sql, TYPE_VID, $season_tid);
+  while ($row = db_fetch_object($res)) {
+// get all brands for current type  
+    $sql = "SELECT tid, nid 
+  		FROM  {term_node} 
+  		WHERE nid = %d 
+  		AND tid IN 
+  		( SELECT tid FROM {term_data} WHERE vid = %d )
+  		";
+    $res2 = db_query($sql, $row->nid , BRAND_VID);
+    while ($row2 = db_fetch_object($res2)) {
+      $nid_brand_arr[$row->tid][$row2->tid][] = $row2->nid;
+      
+      if (!isset($type_brands_count[$row->tid][$row2->tid])){
+        $type_brands_count[$row->tid][$row2->tid] = 1;
+      }
+      else {
+        $type_brands_count[$row->tid][$row2->tid]++;
+      }
+    }
+  } 
+  
+  return theme('seasons_view', $type_brands_count, $season_tid);
+}
+
+function obcustom_theme ($param) {
+  return array(
+  	'seasons_view' => array(
+      'arguments' => array('type_brands_count' => NULL, 'season_tid' => NULL),
+    ), 
+  );
+}
+
+function theme_seasons_view($type_brands_count, $season_tid) {
+  $col_quan = 4;
+  $static_td = 0;
+  $header = array();
+  $rows = array();
+  $row = array();
+
+  foreach($type_brands_count as $pr_type => $pr_brand) {
+    $content_type = '<h2>' . _obcustom_termname_by_tid($pr_type) . '</h2>';
+    
+    $content_brands = array();
+    foreach($pr_brand as $pr_brand2 => $quan) {
+      $content_brands[] = l(_obcustom_termname_by_tid($pr_brand2) . ' (' . $quan . ')', 'products/' . $season_tid . '/' . $pr_type . '/' . $pr_brand2);
+    }
+    $content_brands = theme('item_list', $content_brands);
+    $row[] = $content_type . $content_brands;
+    
+    if (count($row) == $col_quan || (count($row) + $static_td) == count($type_brands_count)) {
+
+      if((count($row) + $static_td) == count($type_brands_count)) {
+        for($i = 0; $i < ((count($row) + $static_td) % $col_quan); $i++) {
+          $row[] = '&nbsp;';
+        }
+      }
+      $rows[] = $row;
+      $static_td += count($row);
+      $row = array();
+      //unset($row);
+    }    
+    
+  }
+  return theme('table', $header, $rows); 
+}  
+
+function _obcustom_termname_by_tid($tid) {
+  $sql = "SELECT name FROM {term_data} WHERE tid = %d";
+  return db_result(db_query($sql, $tid));
+}
+
+function obcustom_token_list($type = 'all') {
+  $tokens = array();
+
+  if ($type == 'node' || $type == 'all') {
+    $tokens['node']['product-brand-term'] = t("Name of brand term of this node.");
+    $tokens['node']['product-type-term'] = t("Name of brand term of this node."); 
+    $tokens['node']['product-season-term'] = t("Name of brand term of this node."); 
+  }
+
+  return $tokens;
+}
+
+function obcustom_token_values($type, $object = NULL, $options = array()) {
+  $values = array();
+
+  if ($type == 'node' && !empty($object)) {
+    foreach($object->taxonomy as $tax_arr => $node_term) {
+      $sql = "SELECT vid FROM {term_data} WHERE tid = %d";
+      $res = db_result(db_query($sql, $node_term));
+      if($res == BRAND_VID) {
+        $values['product-brand-term'] = $node_term;
+      } 
+      else if($res == TYPE_VID) {
+        $values['product-type-term'] = $node_term;
+      }   
+      else if($res == SEASON_VID) {
+        $values['product-season-term'] = $node_term;
+      }
+    }    
+  }
+
+  return $values;
+}
+
+function obcustom_form_alter(&$form, &$form_state, $form_id) {
+  if($form_id == 'user_login_block') {
+    $form['name']['#size'] = 12;
+    $form['pass']['#size'] = 12;
+  }
+  
+  if($form_id == 'uc_cart_checkout_form') {
+    $form['continue']['#value'] = 'Продолжить';
+  }
+
+  if(strstr($form_id, 'uc_catalog_buy_it_now_form') || strstr($form_id, 'uc_product_add_to_cart_form')) {
+    $form['submit']['#value'] = 'Купить';
+  } 
+   //print dsm($form);
+   unset($form['base']['dimensions']);
+   unset($form['base']['weight']);
+   unset($form['base']['pkg_qty']);   
+   unset($form['base']['ordering']);
+
+}
+
+
+function obcustom_line_item() {
+  $items[] = array(
+    'id' => 'discount_card',
+    'title' => t('Цена со скидкой'),
+    'weight' => 1,
+    'stored' => TRUE,
+    'calculated' => TRUE,
+    'display_only' => TRUE,
+    'callback' => 'uc_line_item_discount_card',
+  );
+  
+  $items[] = array(
+    'id' => 'delivery_cost',
+    'title' => t('Доставка'),
+    'weight' => 1,
+    'stored' => TRUE,
+    'calculated' => TRUE,
+    'add_list' => TRUE,
+    'display_only' => FALSE,
+    'callback' => 'uc_line_item_discount_card',
+  );  
+  return $items;
+}
+
+function uc_line_item_discount_card($op, $arg1) {
+  switch ($op) {
+    case 'display':
+      
+      $total = _obcustom_price_wo_discount($arg1);
+      
+      
+      if($arg1->extra_fields['ucxf_discount_card'] != 0) {
+        $total = $total - ($total / 100.00 * $arg1->extra_fields['ucxf_discount_card']);
+      }    
+      
+      $lines[] = array(
+        'id' => 'discount_card',
+        'title' => t('Цена со скидкой'),
+        //'amount' => (uc_order_get_total($arg1, TRUE)),
+        'amount' => $total,
+      );
+      
+      return $lines;  
+  }
+//NB! Total price with discount was settled in file uc_order.module function 'uc_order_get_total'
+}
+
+
+
+// NB! "Unknown" message (in address) corrected in function 'uc_address_format' in file 'uc_store/uc_store.module'
+// NB! message about delivery is corrected in 'uc_cart/uc_cart_checkout_pane.inc'
+
+function _obcustom_salecheck($order_id) {
+  
+  //NB! Order View was changed in 'uc_order_view' function in uc_order/uc_order.admin.inc file (look at 'return' statement)
+
+  $all_fields = db_result(db_query("SELECT value FROM uc_extra_fields WHERE db_name = 'ucxf_metro_station'"));
+  $carret = strpos($all_fields, "\r\n") === FALSE ? "\n" :  "\r\n";
+  $all_fields_arr = explode($carret, $all_fields);
+  $metro_arr = array();
+  foreach($all_fields_arr as $field) {
+    $metro_arr[] = explode("|", $field);
+  }
+
+  $order = uc_order_load($order_id);
+  //dprint_r($order);
+  $table_header = array('№', 'артикул', 'Товар', 'размер', 'цена', 'кол-во', 'сумма');
+  $table_rows = array();
+  $i = 1;
+  foreach($order->products as $product) {
+    $table_rows[] = array (
+      $i,
+      $product->model,
+      $product->title,
+      $product->data['attributes']['размер'][0],
+      (int)$product->price,
+      $product->qty,
+      (int)$product->price * $product->qty,         
+    );
+    $i++;
+  }
+  $total_wo_discount = _obcustom_price_wo_discount($order);
+  if($order->extra_fields['ucxf_discount_card'] != 0) {
+    $discount_price = $total_wo_discount - ($total_wo_discount / 100 * $order->extra_fields['ucxf_discount_card']);
+  }
+  else {
+    $discount_price = $total_wo_discount;
+  }
+  $discount_price = floor($discount_price);
+  $delivery_cost = isset($order->line_items[1]['amount']) ? $order->line_items[1]['amount'] : 0;
+  if(($discount_price + $delivery_cost) == $order->order_total) {
+    $total_price = $order->order_total;
+  }
+  else {
+    $total_price = 'Произошла ошибка';
+  }
+  
+  $output_header = '<html><head><title></title>';
+  $output_header .= '<style type="text/css" media="all">
+    #salecheck {
+      width: 650px;      
+    }  
+    #salecheck p, table {
+      font-size: 14px;
+      font-family: arial;
+      margin: 2px;      
+    }
+    #salecheck p.salecheck-header {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 14px;      
+    }
+    #salecheck .salecheck-seller p{
+      float: left;
+    }
+    .salecheck-seller {
+      float: left;      
+    }
+    .salecheck-customer {
+      clear: left;
+    }        
+    .salecheck-customer-left {
+      float: left;
+    }    
+    .salecheck-customer-right {
+      float: left;
+    }
+    .salecheck-customer-right p {
+      display: block;
+    }    
+    table {
+      width: 100%;
+      margin-top: 10px;      
+      border-collapse: collapse;     
+      clear:left;
+      border: 1px solid black;
+      font-weight: normal;
+    }
+    th {
+      border: 1px solid black;
+      border-bottom: none;
+      font-weight: normal;      
+    }
+    td {
+      border: 1px solid black;
+      border-bottom: none;
+      font-weight: normal;
+      padding-left: 4px;
+    }
+    .salecheck-after-table-right {
+      float: right;
+      margin-bottom: 10px;      
+    }
+    .salecheck-after-table-right-texts, .salecheck-after-table-right-numbers {
+      float: left;
+    }
+   .salecheck-after-table-right-texts {
+      text-align: right;
+      padding-right: 5px;
+    }    
+    .salecheck-footer {
+      clear:right;
+    }
+    .salecheck-footer p {
+      padding-top: 12px;
+    }
+    .salecheck-footer sup {
+      float: right;
+      padding-right: 118px;
+      margin-bottom: 10px;  
+      font-size: 8px;
+    }     
+    #salecheck .salecheck-disclimer p {
+      font-size: 12px;
+      text-align: justify;      
+    }
+    .salecheck-disclimer br {
+      line-height: 10px;
+    }
+    .salecheck-disclimer {
+      margin-top: 20px;
+    }
+    hr {
+      margin-top: 30px;    
+      margin-bottom: 20px;
+    }    
+  </style>';   
+  $output_header .= '</head><body>';  
+  $output_container_header = '<div id="salecheck">';
+    $output .= '<p></p>';    
+    $output .= '<p class="salecheck-header">Товарный чек №' . $order->order_id . '    от ' . format_date($order->created, 'custom', 'j / m / Y') . '</p>';
+    $output .= '<div class="salecheck-seller">';  
+      $output .= '<p>Поставщик:</p>';
+      $output .= '<p>ИП Бакарова М.М. ИНН 771508628810,WWW.OBYVASHKA.RU</p>';
+    $output .= '</div>';
+    $output .= '<div class="salecheck-customer">';
+      $output .= '<div class="salecheck-customer-left">';     
+        $output .= '<p>Покупатель:</p>';
+      $output .= '</div>';        
+      $output .= '<div class="salecheck-customer-right">';   
+        $output .= '<p>ФИО: ' . $order->delivery_first_name . ' ' . $order->delivery_last_name . '</p>';
+        $output .= '<p>Телефон: ' . $order->delivery_phone . '</p>';
+        $output .= '<p>Адрес: ' . $order->delivery_street1 . '</p>';
+        $output .= '<p>Метро: ' . $metro_arr[$order->extra_fields['ucxf_metro_station_delivery']][1] . '</p>';
+        $output .= '<p>Еmail: ' . $order->primary_email . '</p>';
+        $output .= '<p>Скидка: ' . ($order->extra_fields['ucxf_discount_card'] != 0 ? $order->extra_fields['ucxf_discount_card'] .'%' : 'нет') . '</p>';        
+        $output .= '<p>Примечание: ' . $order->data . '</p>';        
+      $output .= '</div>';       
+    $output .= '</div>';
+    $output .= theme('table', $table_header, $table_rows);
+    $output .= '<div class="salecheck-after-table-right">';
+      $output .= '<div class="salecheck-after-table-right-texts">';
+        $output .= '<p>Всего:</p>';
+        $output .= '<p>Цена со скидкой:</p>';        
+        $output .= '<p>Услуги по доставке товара:</p>';
+        $output .= '<p>Итого к оплате:</p>';         
+      $output .= '</div>';
+      $output .= '<div class="salecheck-after-table-right-numbers">';
+        $output .= '<p>' . $total_wo_discount . '</p>';
+        $output .= '<p>' . $discount_price . '</p>';        
+        $output .= '<p>' . (int)$delivery_cost . '</p>';
+        $output .= '<p>' . $total_price . '</p>';       
+      $output .= '</div>';       
+    $output .= '</div>';
+    $output .= '<div class="salecheck-footer">';
+      $output .= '<p>Отпустил  _______________/                                  /    </p>';
+      $output .= '<p>Получил, претензий по качеству не имею  _______   /________________ /   _________ ' . date('Y') . 'г. </p>';
+      $output .= '<sup>Ф.И.О</sup>';      
+    $output .= '</div>';
+    $disclimer = '<div class="salecheck-disclimer">';
+      $disclimer .= '<p>Возврат и обмен товара</p>
+        <p>Согласно закону РФ «О защите прав потребителя» статья 26.1 пункт 4 Вы можете вернуть или обменять купленную обувь в течение 7 дней с момента получения и оплаты товара. Возврат/обмен производится только в том случае,если товар не был в употреблении, сохранены упаковка, фабричные ярлыки,кассовый или товарный чек.</p><br />
+        <p>Стоимость вызова курьера для обмена или возврата каждой пары - 250 рублей.</p><br />
+        <p>В случае отказа Покупателя от приёмки товара по причинам, не связанным с ненадлежащим качеством товара, Покупатель в соответствии с пунктом 3 статьи 497 Гражданского Кодекса РФ обязан оплатить стоимость доставки в размере 200 рублей вне зависимости от того, на какую стоимость был оформлен заказ.</p>
+        <p>_____________________________(подпись покупателя)</p>';
+    $disclimer .= '</div>';      
+  $output_container_footer .= '</div>';
+
+  $output_footer .= '</body></html>';    
+  print $output_header
+      . $output_container_header
+      . $output
+      . $disclimer
+      //. '<hr>' . $output
+      . $output_container_footer
+      . $output_footer;
+  
+}
+
+function _obcustom_price_wo_discount($order) {
+      $total = 0;    
+   
+      if (is_array($order->products)) {
+        $context = array(
+          'revision' => 'altered',
+          'type' => 'order_product',
+        );
+    
+        foreach ($order->products as $product) {
+          $price_info = array(
+            'price' => $product->price,
+            'qty' => ($product->qty) ? $product->qty : 1,
+          );
+          $context['subject'] = array(
+            'order' => $order,
+            'product' => $product,
+            'node' => node_load($product->nid),
+          );
+          $total += uc_price($price_info, $context);
+        }
+      }
+      return $total;
+}
+
